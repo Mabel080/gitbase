@@ -1,0 +1,143 @@
+
+form{
+    width: 1000px;
+    height: 400px;
+    padding: 10px;
+    border: 2px solid green;
+    box-sizing: border-box;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: 7px 7px 7px darkgreen; 
+    margin-top: 50px;
+    background-color:rgb(245, 250, 222); 
+}
+
+input[ type="text"]{
+width: 80%;
+padding: 2px;
+height: 20px;
+margin-left: 40px;
+margin-top: 20px;
+}
+
+input[type="password"]{
+    width: 60%;
+    padding: 2px;
+    height: 20px;
+    margin-left: 120px;
+    margin-top: 20px;
+    }
+
+ input[type="number"]{
+        width: 80%;
+        padding: 2px;
+        height: 20px;
+        margin-left: 20px;
+        margin-top: 20px;
+        }
+
+label{
+margin: 5px;
+}
+
+#Lb{
+    margin-left: 65px;
+}
+
+.input-group{
+width: 90%;
+max-width: 600px;
+position: relative;
+margin-top: 20px;
+margin-bottom: 30px;
+}
+
+
+#email-field{
+    display: block;
+    width: 100%;
+    border: 0;
+    font-size: 15px;
+    padding: 5px 2px;
+    position: relative;
+    z-index: 10;
+    border-bottom: 2px solid #555;
+    background: transparent;
+    outline: none;
+   
+}
+
+#email-error{
+    position: absolute;
+    top: 100%;
+    left: 2px;
+    font-size: 12px;
+    font-weight: 350;
+    color: red;
+    transition: top 0.5s;
+}
+
+.contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn{
+    padding: 10px 60px;
+    background: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 400;
+    border-radius: 30px;
+  
+}
+button[type=submit]:hover{
+background-color:darkgreen;
+color: white;
+}
+
+button[type=submit]{
+    background-color:black;
+    color: white;
+    }
+.popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+
+}
+.open-popup{
+    visibility: visible;
+    top: 40%;
+    transform: translate(-50%, -50%) scale(1);
+
+}
+.popup h2{
+    font-size: 40px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.popup button{
+    width: 80%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: green;
+    color: #fff;
+    border: 0;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}

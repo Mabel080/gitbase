@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Hustle Week 1 Task</title>
+    <link rel="stylesheet" href="SH.css">
+</head>
+<body>
+    
+     <!--Create a simple form with the following features:
+1. Takes in Name, Email address, Phone number, Gender and Password
+2. A Submit button
+3. On submit must highlight the empty block
+4. Error message when entering the wrong format of email ID
+5. Display a success message on successful submission--> 
+
+<form action="">
+    <label>Name: </label>
+    <input type="text">
+
+    <div class="input-group">
+        <label id="email-label">Email Address:</label>
+        <input type="email" spellcheck="false" id="email-field" onkeyup="validateEmail()">
+        <span id="email-error"></span>
+    </div>
+   
+  
+    <label>Phone Number:</label>
+    <input type="number"> <br><br>
+
+    <label> Gender:</label>
+    <label id="Lb" for="male">Male</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label id="Lb" for="female">Female</label>
+    <input type="radio" id="female" name="gender" value="female"> <br>
+
+    <label>Password:</label>
+    <input type="text"> <br><br><br>
+   
+  </form>
+
+  <div class="contain">
+    <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+    <div class="popup" id="popup">
+        <h2>Thank You</h2>
+        <p>Your details has been successfully submitted. Thanks</p>
+        <button type="button"  onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script>
+        let popup = document.getElementById("popup");
+
+            function openPopup(){
+    popup.classList.add("open-popup")
+}
+            function closePopup(){
+              popup.classList.remove("open-popup")
+}
+
+    var emailField = document.getElementById("email-field");
+        var emailLabel = document.getElementById("email-label");
+        var emailError = document.getElementById("email-error");
+
+        function validateEmail(){
+            emailLabel.style.bottom = "45px";
+
+            if (!emailField.value.match(/[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+                emailError.innerHTML = "Please enter a valid email";
+                emailField.style.borderBottomColor = "red"
+                emailError.style.top = "120%"
+                return false;
+            }
+
+            emailError.innerHTML = "";
+            emailField.style.borderBottomColor = "green"
+            emailError.style.top = "100%"
+            return true;
+        }
+</script>
+</body>
+</html>
